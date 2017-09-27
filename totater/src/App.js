@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Notes from 'Notes';
+import Notes from 'containers';
 class App extends Component {
   render() {
     return (
