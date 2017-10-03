@@ -1,3 +1,8 @@
+body {
+    margin: 0;
+    background-color: rgb(232,232,232);
+}
+
 .App {
   text-align: center;
 }
@@ -25,4 +30,70 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.Notes-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.Form-container {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    background-color: white;
+    flex-grow: 1;
+    width: 50%;
+    border-radius: 3px;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.2);
+}
+
+form {
+    width: 100%;
+}
+
+.Label-box input {
+    width: 100%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 0px solid #ccc;
+    outline: none;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    border: 0px solid #ccc;
+    outline: none;
+    resize: none;
+    font-size: medium;
+}
+
+.Button-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 12px 20px;
+}
+
+.Button-box input {
+    outline: none;
+    border: 0px;
+    font-size: medium;
+    #background-color: inherit;
+    border-radius: 3px;
+    padding: 5px 15px;
+    background-color: inherit;
+}
+
+.Button-box input:hover {
+    background-color: lightgrey;
 }
