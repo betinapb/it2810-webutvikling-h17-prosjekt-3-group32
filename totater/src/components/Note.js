@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import 'App.css';
 
-const Note = ({title, note}) => (
+const Note = ({title, note, removeNote}) => (
     <div className="Note-container">
         <h3 className="Note-title">
             {title}
@@ -9,6 +9,9 @@ const Note = ({title, note}) => (
         <p>
             {note}
         </p>
+        <div className="Button-box">
+            <button onClick={() => removeNote(title)}>DELETE</button>
+        </div>
     </div>
 );
 

@@ -9,7 +9,6 @@ export default class CreateNote extends Component {
         this.state = {
             title: '',
             note: '',
-            notes: null,
         };
 
         this.onChange = this.onChange.bind(this);
@@ -27,12 +26,11 @@ export default class CreateNote extends Component {
 
     onSubmit(e) {
         const { title, note } = this.state;
-        localStorage.setItem(title, (title, note));
 
+        this.props.createNote(title, note)
         this.setState({
             title: '',
             note: '',
-            notes: title
          });
          e.preventDefault();
     }
