@@ -8,9 +8,9 @@
     "react-scripts": "1.0.14"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cross-env NODE_PATH=src react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "cross-env NODE_PATH=src react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "eslint src/*.js"
   },
@@ -19,6 +19,7 @@
     "babel-eslint": "^8.0.1",
     "babel-preset-airbnb": "^2.4.0",
     "babel-preset-env": "^1.6.0",
-    "eslint": "^4.7.2"
+    "eslint": "^4.7.2",
+    "react-textarea-autosize": "^5.1.0"
   }
 }
