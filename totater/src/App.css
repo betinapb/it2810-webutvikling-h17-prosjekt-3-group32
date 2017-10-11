@@ -141,7 +141,7 @@ textarea {
     padding-left: 15px;
     border-left: 2px solid #ccc;
     min-height: 90vh;
-    max-width: 250px
+    max-width: 200px;
     flex 1 auto;
 }
 
