@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Notes from 'containers';
+import Notes, {TodoList} from 'containers';
 class App extends Component {
     render() {
         return (
@@ -7,7 +7,10 @@ class App extends Component {
                 <header className="App-header">
                     <h1 className="App-title">Totater</h1>
                 </header>
-                <Notes />
+                <div className="App-parts">
+                    <Notes />
+                    <TodoList />
+                </div>
             </div>
         );
     }

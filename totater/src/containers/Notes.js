@@ -15,14 +15,15 @@ class Notes extends Component {
     }
 
     createNote(title, note) {
-        localStorage.setItem(title, note)
+        let key = "n" + title
+        localStorage.setItem(key, note)
         this.setState({
             notes: localStorage
         });
     }
 
     removeNote(title) {
-        localStorage.removeItem(title);
+        localStorage.removeItem("n" + title);
         this.setState({
             notes: localStorage
         });
@@ -32,16 +33,19 @@ class Notes extends Component {
         const { notes } = this.state
         let list = []
         for (var i=0; i < notes.length; i++) {
-            let title = notes.key(i);
-            let note = notes.getItem(title);
-            list.push(
-                <Note
-                    key={i}
-                    className="Note-container"
-                    title={title}
-                    note={note}
-                    removeNote={this.removeNote}
-                />);
+            let key = notes.key(i);
+            if (key[0] === "n"){
+                let title = key.slice(1)
+                let note = notes.getItem(key);
+                list.push(
+                    <Note
+                        key={i}
+                        className="Note-container"
+                        title={title}
+                        note={note}
+                        removeNote={this.removeNote}
+                    />);
+            }
         }
         return (list);
     }
